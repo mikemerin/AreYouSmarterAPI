@@ -23,6 +23,7 @@ module AreyousmarterAPI
     config.api_only = true
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
+        # note: will change origins to the HTML once published (security risk with :post controllers)
         origins '*'
         resource '*',
           headers: '*',
