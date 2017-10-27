@@ -23,10 +23,11 @@ module AreyousmarterAPI
     config.api_only = true
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
+        # note will update to the URL once repo is posted
         origins '*'
         resource '*',
           headers: '*',
-          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+          methods: [:get, :post, :options, :head]
       end
     end
   end
