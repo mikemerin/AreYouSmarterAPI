@@ -20,7 +20,7 @@ class Api::V1::QuestionController < ApplicationController
   private
 
   def question_params
-    params.permit(:quiz_id, :question, :array, :answer, :wrong_answer, :method, :quiz_type, :choices, :correct)
+    params.require(:question).permit(:quiz_id, :question, :array, :answer, :wrong_answer, :method, :quiz_type, :choices, :correct)
   end
 
 end
