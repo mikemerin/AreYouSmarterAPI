@@ -6,10 +6,10 @@ require_relative 'config/application'
 Rails.application.load_tasks
 
 
-namespace :app do
+namespace :db do
 
-  desc "reset and prep for scraping"
-  task :reset => :environment do
+  desc "reload and prep for scraping"
+  task :reload => :environment do
     system("rake db:drop")
     system("rake db:create")
     system("rake db:migrate")
