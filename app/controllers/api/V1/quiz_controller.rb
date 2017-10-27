@@ -20,7 +20,7 @@ class Api::V1::QuizController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:username, :category, :quiz_type, :language, :score)
+    params.permit(:username, :category, :quiz_type, :language, :score)
   end
 
 end
