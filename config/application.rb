@@ -26,7 +26,7 @@ module AreyousmarterAPI
         # note will update to the URL once repo is posted
         origins '*'
         resource '*',
-          headers: '*',
+          headers: :any,
           methods: [:get, :post, :options, :head]
       end
     end

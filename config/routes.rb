@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :quiz, only: [:index, :create, :show]
       resources :question, only: [:index, :create, :show]
 
+      get '/question/create_ruby_question', to: 'question#create_ruby_question'
+
     end
   end
 end
